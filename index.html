@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shotlab Visuals — Product Photography Studio</title>
+  <meta name="description" content="Shotlab Visuals is a product photography studio in Curitiba/PR. Specialists in e-commerce, fashion, cosmetics and agency.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- FIXED NAVIGATION                             -->
+  <!-- ============================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__container">
+      <div class="navbar__logo">
+        <img src="assets/shotlab_logo.png" alt="Shotlab Visuals">
+      </div>
+      <button class="navbar__toggle" id="navToggle" aria-label="Open navigation menu">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#sobre">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#equipe">Team</a></li>
+        <li><a href="#vantagens">Benefits</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#zoom">Location</a></li>
+        <li><a href="#contato" class="navbar__cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============================================ -->
+  <!-- SECTION 1: HERO                              -->
+  <!-- ============================================ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg" id="heroBg">
+      <img src="assets/imagem_1.png" alt="Professional product photo" class="hero__bg-img" id="heroImg">
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content">
+      <h1 class="hero__title">Photography that<br>Sells</h1>
+      <p class="hero__subtitle">We turn your products into irresistible images.</p>
+
+      <!-- Statistics Grid -->
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-count="100">0</span>
+          <span class="hero__stat-label">Projects</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-count="300">0</span>
+          <span class="hero__stat-label">Clients</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-count="2">0</span>
+          <span class="hero__stat-label">Years</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-count="500">0</span>
+          <span class="hero__stat-label">Photos Delivered</span>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="hero__ctas">
+        <a href="#contato" class="btn btn--primary">Request a Quote</a>
+        <a href="#portfolio" class="btn btn--outline">View Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 2: ABOUT THE SERVICE                 -->
+  <!-- ============================================ -->
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Our Service</span>
+        <h2 class="section-title">How we work</h2>
+      </div>
+
+      <!-- 3-step Process -->
+      <div class="processo reveal">
+        <div class="processo__step">
+          <div class="processo__number">01</div>
+          <div class="processo__icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <h3 class="processo__title">Briefing</h3>
+          <p class="processo__desc">We get to know your product, your brand and your goals. Together we define the style, settings and number of images needed.</p>
+          <div class="processo__connector"></div>
+        </div>
+        <div class="processo__step">
+          <div class="processo__number">02</div>
+          <div class="processo__icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="12" r="3"/>
+              <line x1="12" y1="2" x2="12" y2="5"/>
+              <line x1="12" y1="19" x2="12" y2="22"/>
+              <line x1="2" y1="12" x2="5" y2="12"/>
+              <line x1="19" y1="12" x2="22" y2="12"/>
+            </svg>
+          </div>
+          <h3 class="processo__title">Production</h3>
+          <p class="processo__desc">Our professional photographers capture every detail with precise lighting and perfect framing to highlight your product.</p>
+          <div class="processo__connector"></div>
+        </div>
+        <div class="processo__step">
+          <div class="processo__number">03</div>
+          <div class="processo__icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+          </div>
+          <h3 class="processo__title">Delivery</h3>
+          <p class="processo__desc">Professional retouching, clipping, color adjustments and delivery in high resolution, ready for use on any platform.</p>
+        </div>
+      </div>
+
+      <!-- Target Audience Cards -->
+      <div class="cards-grid reveal">
+        <div class="card-target">
+          <div class="card-target__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+          </div>
+          <h3 class="card-target__title">E-commerce</h3>
+          <p class="card-target__desc">Product photos with clipping, white background and contextual images for online stores and marketplaces.</p>
+        </div>
+        <div class="card-target">
+          <div class="card-target__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="card-target__title">Fashion</h3>
+          <p class="card-target__desc">Lookbooks, catalogs and fashion editorials with personalized art direction and professional image retouching.</p>
+        </div>
+        <div class="card-target">
+          <div class="card-target__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+              <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6z"/>
+              <circle cx="12" cy="12" r="2"/>
+            </svg>
+          </div>
+          <h3 class="card-target__title">Cosmetics</h3>
+          <p class="card-target__desc">Beauty and cosmetics photography focused on textures, colors and finishes, ideal for launches and catalogs.</p>
+        </div>
+        <div class="card-target">
+          <div class="card-target__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <line x1="3" y1="9" x2="21" y2="9"/>
+              <line x1="9" y1="21" x2="9" y2="9"/>
+            </svg>
+          </div>
+          <h3 class="card-target__title">Agencies</h3>
+          <p class="card-target__desc">Creative partnership for advertising and marketing agencies, with images that meet high-level campaigns.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 3: PORTFOLIO                         -->
+  <!-- ============================================ -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Our work</h2>
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div class="portfolio-grid reveal" id="portfolioGrid">
+        <div class="portfolio-item" data-category="comida">
+          <div class="portfolio-item__img">
+            <img src="assets/imagem_2.png" alt="Food photography">
+          </div>
+          <div class="portfolio-item__overlay">
+            <span class="portfolio-item__cat">Food</span>
+            <h4 class="portfolio-item__title">A Perfect Mixture of Components</h4>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="acessorios">
+          <div class="portfolio-item__img">
+            <img src="assets/imagem_3.png" alt="Accessory photography">
+          </div>
+          <div class="portfolio-item__overlay">
+            <span class="portfolio-item__cat">Accessories</span>
+            <h4 class="portfolio-item__title">An Instant Connection</h4>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="roupas">
+          <div class="portfolio-item__img">
+            <img src="assets/imagem_4.png" alt="Clothing photography">
+          </div>
+          <div class="portfolio-item__overlay">
+            <span class="portfolio-item__cat">Clothing</span>
+            <h4 class="portfolio-item__title">Maintaining Style and Personality</h4>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="comida">
+          <div class="portfolio-item__img">
+            <img src="assets/imagem_5.png" alt="Food photography">
+          </div>
+          <div class="portfolio-item__overlay">
+            <span class="portfolio-item__cat">Food</span>
+            <h4 class="portfolio-item__title">Feeling Taste Just by Looking</h4>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="acessorios">
+          <div class="portfolio-item__img">
+            <img src="assets/imagem_6.png" alt="Watch photography">
+          </div>
+          <div class="portfolio-item__overlay">
+            <span class="portfolio-item__cat">Accessories</span>
+            <h4 class="portfolio-item__title">Attending Your Needs</h4>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="roupas">
+          <div class="portfolio-item__img">
+            <img src="assets/imagem_7.png" alt="Fashion photography">
+          </div>
+          <div class="portfolio-item__overlay">
+            <span class="portfolio-item__cat">Clothing</span>
+            <h4 class="portfolio-item__title">Fashion and Essence</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 4: TEAM                              -->
+  <!-- ============================================ -->
+  <section class="equipe" id="equipe">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Team</span>
+        <h2 class="section-title">Who makes it happen</h2>
+      </div>
+
+      <div class="equipe-grid reveal">
+        <!-- Nicolas -->
+        <div class="equipe-card">
+          <div class="equipe-card__photo">
+            <img src="assets/imagem_pietro.png" alt="Founder and Director" class="equipe-card__img">
+          </div>
+          <h3 class="equipe-card__name">Pietro</h3>
+          <p class="equipe-card__role">Founder and Director</p>
+        </div>
+        <!-- Pietro -->
+        <div class="equipe-card">
+          <div class="equipe-card__photo">
+            <img src="assets/imagem_nicolas.png" alt="Creative Director" class="equipe-card__img">
+          </div>
+          <h3 class="equipe-card__name">Nicolas</h3>
+          <p class="equipe-card__role">Creative Director</p>
+        </div>
+        <!-- Hassan -->
+        <div class="equipe-card">
+          <div class="equipe-card__photo">
+            <img src="assets/imagem_hassan.png" alt="Digital Marketing Analyst" class="equipe-card__img">
+          </div>
+          <h3 class="equipe-card__name">Hassan</h3>
+          <p class="equipe-card__role">Digital Marketing Analyst</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 5: WHY CHOOSE US                     -->
+  <!-- ============================================ -->
+  <section class="vantagens" id="vantagens">
+    <div class="container">
+      <div class="section-header section-header--light reveal">
+        <span class="section-tag">Objectives</span>
+        <h2 class="section-title section-title--light">What makes us special?</h2>
+      </div>
+
+      <div class="vantagens-grid reveal">
+        <div class="vantagem-card">
+          <div class="vantagem-card__icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3 class="vantagem-card__title">Fast Delivery</h3>
+          <p class="vantagem-card__desc">Agile deadlines without compromising quality. Receive your images in the shortest time possible.</p>
+        </div>
+        <div class="vantagem-card">
+          <div class="vantagem-card__icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <h3 class="vantagem-card__title">Superior Quality</h3>
+          <p class="vantagem-card__desc">State-of-the-art equipment and experienced professionals for impeccable results.</p>
+        </div>
+        <div class="vantagem-card">
+          <div class="vantagem-card__icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="vantagem-card__title">Personalized Service</h3>
+          <p class="vantagem-card__desc">Every project is unique. We adapt our approach to the specific needs of your business.</p>
+        </div>
+        <div class="vantagem-card">
+          <div class="vantagem-card__icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+            </svg>
+          </div>
+          <h3 class="vantagem-card__title">Affordable Prices</h3>
+          <p class="vantagem-card__desc">Flexible packages that fit your company's budget, from one-off projects to recurring contracts.</p>
+        </div>
+        <div class="vantagem-card">
+          <div class="vantagem-card__icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <h3 class="vantagem-card__title">Proven Results</h3>
+          <p class="vantagem-card__desc">Over 350 projects delivered with a satisfaction rate above 95% among our clients.</p>
+        </div>
+        <div class="vantagem-card">
+          <div class="vantagem-card__icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3 class="vantagem-card__title">Dedicated Support</h3>
+          <p class="vantagem-card__desc">Follow-up at every stage of the project, with transparent communication and unlimited revisions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 6: CUSTOMER REVIEWS                    -->
+  <!-- ============================================ -->
+  <section class="reviews" id="reviews" aria-labelledby="reviews-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Client Reviews</span>
+        <h2 class="section-title" id="reviews-title">Loved by our clients</h2>
+        <p class="reviews__intro">Simple, polished images that make every product stand out.</p>
+      </div>
+
+      <div class="reviews__grid" id="reviewsGrid">
+        <!-- Duplicate this .review-card to add another review. Change only the text, stars and score. -->
+        <article class="review-card reveal" tabindex="0">
+          <div class="review-card__topline">
+            <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <span class="review-card__score" aria-label="9.4 out of 10">9.4<span>/10</span></span>
+          </div>
+          <blockquote class="review-card__text">“The photos made our products look premium from day one. Fast delivery and an excellent eye for detail.”</blockquote>
+          <footer class="review-card__author">
+            <span class="review-card__avatar" aria-hidden="true">AM</span>
+            <span>
+              <strong>Alex Morgan</strong>
+              <small>Brand Manager</small>
+            </span>
+          </footer>
+        </article>
+
+        <article class="review-card reveal" tabindex="0">
+          <div class="review-card__topline">
+            <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <span class="review-card__score" aria-label="9.8 out of 10">9.8<span>/10</span></span>
+          </div>
+          <blockquote class="review-card__text">“Clean, consistent and exactly what our online store needed. The whole process was easy.”</blockquote>
+          <footer class="review-card__author">
+            <span class="review-card__avatar" aria-hidden="true">JS</span>
+            <span>
+              <strong>Jamie Silva</strong>
+              <small>E-commerce Owner</small>
+            </span>
+          </footer>
+        </article>
+
+        <article class="review-card reveal" tabindex="0">
+          <div class="review-card__topline">
+            <div class="review-card__stars" aria-label="4 out of 5 stars">★★★★<span class="review-card__star--empty">★</span></div>
+            <span class="review-card__score" aria-label="9.1 out of 10">9.1<span>/10</span></span>
+          </div>
+          <blockquote class="review-card__text">“A reliable creative partner. The final images captured the quality and personality of our collection.”</blockquote>
+          <footer class="review-card__author">
+            <span class="review-card__avatar" aria-hidden="true">CR</span>
+            <span>
+              <strong>Chris Rocha</strong>
+              <small>Creative Director</small>
+            </span>
+          </footer>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 7: LOCATION & HOW TO HIRE            -->
+  <!-- ============================================ -->
+  <section class="zoom" id="zoom">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Meetings & Hiring</span>
+        <h2 class="section-title">How to schedule a meeting & how to get started</h2>
+      </div>
+
+      <div class="zoom-grid reveal">
+        <!-- Zoom Link -->
+        <div class="zoom__info">
+          <h3 class="zoom__title"></h3>
+          <address class="zoom__address">
+            <p>Schedule your Zoom meeting by clicking in the button below</p>
+          </address>
+          <div class="zoom__map">
+            <iframe
+              src="https://scheduler.zoom.us/shotlabs-visuals/shotlab-visuals-meeting?embed=true"
+              width="100%"
+              height="560"
+              style="border:0; border-radius: 12px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Shotlab Visuals Zoom Meeting scheduler">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Hiring Process -->
+        <div class="zoom__flow">
+          <h3 class="zoom__title">How to hire us</h3>
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-step__number">1</div>
+              <div class="flow-step__content">
+                <div class="flow-step__icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </div>
+                <h4 class="flow-step__title">Initial Contact</h4>
+                <p class="flow-step__desc">Reach out via the form, WhatsApp or email to start the conversation.</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step__number">2</div>
+              <div class="flow-step__content">
+                <div class="flow-step__icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                  </svg>
+                </div>
+                <h4 class="flow-step__title">Detailed Briefing</h4>
+                <p class="flow-step__desc">We align expectations, visual references and define the project scope.</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step__number">3</div>
+              <div class="flow-step__content">
+                <div class="flow-step__icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="1" x2="12" y2="23"/>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                  </svg>
+                </div>
+                <h4 class="flow-step__title">Proposal & Quote</h4>
+                <p class="flow-step__desc">We send a personalized proposal with pricing, deadlines and payment terms.</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step__number">4</div>
+              <div class="flow-step__content">
+                <div class="flow-step__icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                  </svg>
+                </div>
+                <h4 class="flow-step__title">Production</h4>
+                <p class="flow-step__desc">We carry out the photo shoot with the full professional infrastructure of our studio.</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step__number">5</div>
+              <div class="flow-step__content">
+                <div class="flow-step__icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                  </svg>
+                </div>
+                <h4 class="flow-step__title">Final Delivery</h4>
+                <p class="flow-step__desc">We deliver retouched images in high resolution, ready for use on any platform.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 8: CONTACT                           -->
+  <!-- ============================================ -->
+  <section class="contato" id="contato">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Contact</span>
+        <h2 class="section-title">Let's talk</h2>
+      </div>
+
+      <div class="contato-grid reveal">
+        <!-- Contact Information -->
+        <div class="contato__info">
+          <div class="contato__item">
+            <div class="contato__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div class="contato__text">
+              <p class="contato__label">Phone</p>
+              <p class="contato__value">(41) 3333-4444</p>
+            </div>
+          </div>
+          <div class="contato__item">
+            <div class="contato__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div class="contato__text">
+              <p class="contato__label">Email</p>
+              <p class="contato__value">contato@shotlabvisuals.com</p>
+            </div>
+          </div>
+          <div class="contato__item">
+            <div class="contato__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div class="contato__text">
+              <p class="contato__label">Address</p>
+              <p class="contato__value">R. Marechal Deodoro, 630 &mdash; Centro, Curitiba/PR</p>
+            </div>
+          </div>
+
+          <!-- Social Media -->
+          <div class="contato__social">
+            <a href="https://www.instagram.com/shotlabvz/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <form class="contato__form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="nome">Full name</label>
+            <input type="text" id="nome" name="nome" placeholder="Your name" required>
+            <span class="form-error" id="nomeError"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            <span class="form-error" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="telefone">Phone</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(41) 99999-9999">
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Message</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Tell us about your project..." required></textarea>
+            <span class="form-error" id="mensagemError"></span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" id="submitBtn">Send Message</button>
+          <div class="form-feedback" id="formFeedback"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FOOTER                                       -->
+  <!-- ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <img src="assets/shotlab_logo.png" alt="Shotlab Visuals" class="footer__logo">
+          <p class="footer__desc">Product photography studio. Curitiba, PR.</p>
+        </div>
+        <div class="footer__links">
+          <a href="#hero">Home</a>
+          <a href="#sobre">About</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contato">Contact</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Shotlab Visuals. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
