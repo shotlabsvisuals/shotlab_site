@@ -132,123 +132,50 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+/* ========== 7. CONTATO POR E-MAIL ========== */
+var contactForm = document.getElementById('contactForm');
+var nomeInput = document.getElementById('nome');
+var emailInput = document.getElementById('email');
+var telefoneInput = document.getElementById('telefone');
+var mensagemInput = document.getElementById('mensagem');
+var formFeedback = document.getElementById('formFeedback');
+var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  /* ========== 7. VALIDAÇÃO E ENVIO DO FORMULÁRIO ========== */
-  var contactForm = document.getElementById('contactForm');
-  var nomeInput = document.getElementById('nome');
-  var emailInput = document.getElementById('email');
-  var telefoneInput = document.getElementById('telefone');
-  var mensagemInput = document.getElementById('mensagem');
-  var submitBtn = document.getElementById('submitBtn');
-  var formFeedback = document.getElementById('formFeedback');
+contactForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+  var errors = {};
+  if (nomeInput.value.trim().length < 3) errors.nome = 'Nome deve ter pelo menos 3 caracteres.';
+  if (!emailRegex.test(emailInput.value.trim())) errors.email = 'Informe um e-mail válido.';
+  if (mensagemInput.value.trim().length < 10) errors.mensagem = 'Mensagem deve ter pelo menos 10 caracteres.';
 
-  // Regex para e-mail
-  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  function clearValidation(input) {
-    input.classList.remove('invalid', 'valid');
-    var errorSpan = document.getElementById(input.id + 'Error');
-    if (errorSpan) errorSpan.textContent = '';
+  formFeedback.className = 'form-feedback';
+  formFeedback.textContent = '';
+  if (Object.keys(errors).length) {
+    Object.keys(errors).forEach(function (field) {
+      var input = document.getElementById(field);
+      input.classList.add('invalid');
+      var error = document.getElementById(field + 'Error');
+      if (error) error.textContent = errors[field];
+    });
+    formFeedback.textContent = 'Por favor, corrija os campos acima.';
+    formFeedback.classList.add('error');
+    return;
   }
 
-  function showValidation(input, isValid, message) {
-    input.classList.remove('invalid', 'valid');
-    input.classList.add(isValid ? 'valid' : 'invalid');
-    var errorSpan = document.getElementById(input.id + 'Error');
-    if (errorSpan) errorSpan.textContent = isValid ? '' : message;
-  }
+  var corpo = [
+    'Nome: ' + nomeInput.value.trim(),
+    'E-mail: ' + emailInput.value.trim(),
+    'Telefone: ' + (telefoneInput.value.trim() || 'Não informado'),
+    '', 'Mensagem:', mensagemInput.value.trim()
+  ].join('\n');
 
-  // Validação em tempo real
-  nomeInput.addEventListener('input', function () {
-    if (this.value.trim() === '') {
-      clearValidation(this);
-    } else if (this.value.trim().length < 3) {
-      showValidation(this, false, 'Nome deve ter pelo menos 3 caracteres.');
-    } else {
-      showValidation(this, true, '');
-    }
-  });
+  window.location.href = 'mailto:shotlabsvisuals@gmail.com'
+    + '?subject=' + encodeURIComponent('Nova mensagem do site - ' + nomeInput.value.trim())
+    + '&body=' + encodeURIComponent(corpo);
 
-  emailInput.addEventListener('input', function () {
-    if (this.value.trim() === '') {
-      clearValidation(this);
-    } else if (!emailRegex.test(this.value.trim())) {
-      showValidation(this, false, 'Informe um e-mail válido.');
-    } else {
-      showValidation(this, true, '');
-    }
-  });
-
-  mensagemInput.addEventListener('input', function () {
-    if (this.value.trim() === '') {
-      clearValidation(this);
-    } else if (this.value.trim().length < 10) {
-      showValidation(this, false, 'Mensagem deve ter pelo menos 10 caracteres.');
-    } else {
-      showValidation(this, true, '');
-    }
-  });
-
-  contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    var isValid = true;
-    var errors = {};
-
-    // Validar nome
-    if (nomeInput.value.trim().length < 3) {
-      isValid = false;
-      errors.nome = 'Nome deve ter pelo menos 3 caracteres.';
-    }
-
-    // Validar e-mail
-    if (!emailRegex.test(emailInput.value.trim())) {
-      isValid = false;
-      errors.email = 'Informe um e-mail válido.';
-    }
-
-    // Validar mensagem
-    if (mensagemInput.value.trim().length < 10) {
-      isValid = false;
-      errors.mensagem = 'Mensagem deve ter pelo menos 10 caracteres.';
-    }
-
-    // Exibir erros
-    formFeedback.className = 'form-feedback';
-    formFeedback.textContent = '';
-
-    if (!isValid) {
-      Object.keys(errors).forEach(function (field) {
-        var input = document.getElementById(field);
-        showValidation(input, false, errors[field]);
-      });
-      formFeedback.textContent = 'Por favor, corrija os campos acima.';
-      formFeedback.classList.add('error');
-      return;
-    }
-
-    // Simulação de envio
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Enviando...';
-
-    // Simula delay de rede
-    setTimeout(function () {
-      formFeedback.textContent = 'Mensagem enviada com sucesso! Entraremos em contato em breve.';
-      formFeedback.classList.add('success');
-      contactForm.reset();
-
-      // Limpa validações
-      [nomeInput, emailInput, telefoneInput, mensagemInput].forEach(function (input) {
-        input.classList.remove('invalid', 'valid');
-      });
-      document.querySelectorAll('.form-error').forEach(function (span) {
-        span.textContent = '';
-      });
-
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Enviar Mensagem';
-    }, 1500);
-  });
+  formFeedback.textContent = 'Seu aplicativo de e-mail foi aberto com a mensagem preenchida. Clique em Enviar para concluir.';
+  formFeedback.classList.add('success');
+});
 
   /* ========== 8. SCROLL SUAVE PARA ANCHORS ========== */
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
